@@ -4,41 +4,18 @@ using UnityEngine;
 
 public class swing : MonoBehaviour {
 
-    public float smooth = 1F;
-	public bool macha = false;
-	Quaternion startRotation;
-	Quaternion newRotation;
+    public Animator anim;
 
-	void Start() {
-		startRotation = gameObject.transform.localRotation;
+    void Start() {
+        anim = GetComponent<Animator>();
+
 	}
 
-    void Update() {
-		if (Input.GetKeyDown(KeyCode.Mouse0) && !macha) {
-			macha = true;
-		}
-		if (macha) {
-			doSwing();
-		}
-
-		if (Input.GetKeyDown(KeyCode.A)) {
-			Debug.Log(gameObject.transform.localRotation.x);
-		}
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            anim.Play("swing");
+        }
     }
-
-	void doSwing()
-	{   
-
-		transform.localRotation = Quaternion.Slerp(transform.rotation, new Quaternion(0f, startRotation.y, startRotation.z, 1f), 0.5f);
-
-		if (gameObject.transform.rotation.x > -0.01 && 
-			gameObject.transform.rotation.x < 0.01) {
-			stopDoing();
-		}
-	}
-
-	void stopDoing() {
-		gameObject.transform.localRotation = startRotation;
-		macha = false;
-	}
 }

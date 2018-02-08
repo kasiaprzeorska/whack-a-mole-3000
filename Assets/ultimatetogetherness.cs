@@ -49,7 +49,8 @@ public class ultimatetogetherness : MonoBehaviour {
 				Invoke ("Skok", Random.Range (8, 15));
 			}
 			if (col.gameObject.CompareTag ("mlotek")) {
-				if (!onGround & canGetPoint) {
+                rbody.velocity = new Vector3(0, -30, 0);
+                if (!onGround & canGetPoint) {
 					punktacja.punkty -= 1;
 					source.PlayOneShot (auclip [1]);
 					GetComponent<Renderer> ().material.mainTexture = texturescat [1];
@@ -77,7 +78,8 @@ public class ultimatetogetherness : MonoBehaviour {
 
 				}
 				if (col.gameObject.CompareTag ("mlotek")) {
-					if (!onGround & canGetPoint) {
+                rbody.velocity = new Vector3(0, -30, 0);
+                if (!onGround & canGetPoint) {
 						GetComponent<Renderer> ().material.mainTexture = texturesmole [1];
 						punktacja.punkty += 1 * mnoznik;
 						canGetPoint = false;
