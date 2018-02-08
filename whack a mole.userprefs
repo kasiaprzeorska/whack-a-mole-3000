@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\menuskoczki.cs">
+    <Files>
+      <File FileName="Assets\mlotkowy.cs" Line="1" Column="1" />
+      <File FileName="Assets\skokitwokot.cs" Line="1" Column="1" />
+      <File FileName="Assets\skokitwo.cs" Line="1" Column="1" />
+      <File FileName="Assets\punktacja.cs" Line="1" Column="1" />
+      <File FileName="Assets\mnoznik.cs" Line="1" Column="1" />
+      <File FileName="Assets\menu.cs" Line="1" Column="1" />
+      <File FileName="Assets\skakanie.cs" Line="1" Column="1" />
+      <File FileName="Assets\ultimatetogetherness.cs" Line="97" Column="3" />
+      <File FileName="Assets\MoveWithMouse.cs" Line="1" Column="1" />
+      <File FileName="Assets\swing.cs" Line="1" Column="1" />
+      <File FileName="Assets\menuskoczki.cs" Line="44" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
