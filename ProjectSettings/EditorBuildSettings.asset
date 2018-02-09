@@ -11,6 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/gra.unity
     guid: 61f4354688f4b9347aa100e984b11775
-  - enabled: 1
-    path: Assets/hopsasa.unity
-    guid: 7ab6deb5dc343ec4d8ff43e14e1ce7fe
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
