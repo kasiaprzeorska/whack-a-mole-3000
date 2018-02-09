@@ -13,6 +13,7 @@ public class pause : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Cursor.visible = false;
         isPaused = false;
         rzecz = GameObject.FindWithTag("ruszacz");
         image = GameObject.Find("pauseOverlay").GetComponent<Image>();
@@ -42,6 +43,7 @@ public class pause : MonoBehaviour {
     {
         if (isPaused)
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
             rzecz.GetComponent<MoveWithMouse>().enabled = false;
             image.enabled = true;
@@ -50,6 +52,7 @@ public class pause : MonoBehaviour {
         }
         else
         {
+            Cursor.visible = false;
             Time.timeScale = 1;
             rzecz.GetComponent<MoveWithMouse>().enabled = true;
             image.enabled = false;

@@ -35,6 +35,7 @@ public class endGame : MonoBehaviour {
 	void Update () {
         if (koniecGry)
         {
+            Cursor.visible = true;
             GameObject.Find("Timer").GetComponent<pause>().enabled = false;
             GameObject.FindWithTag("ruszacz").GetComponent<MoveWithMouse>().enabled = false;
             wynik.text = "Wynik - " + PlayerPrefs.GetInt("wynikGry");

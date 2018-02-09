@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour {
 
     Image fillImg;
-    float timeAmount = 30;
+    float timeAmount = 75;
     public float time;
     public int amaunt;
 
