@@ -282,6 +282,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\backToMenu.cs" />
+    <Compile Include="Assets\endGame.cs" />
     <Compile Include="Assets\menu.cs" />
     <Compile Include="Assets\menuNavigation.cs" />
     <Compile Include="Assets\menuskoczki.cs" />
@@ -299,6 +301,7 @@
     <Compile Include="Assets\skokitwokot.cs" />
     <Compile Include="Assets\swing.cs" />
     <Compile Include="Assets\timer.cs" />
+    <Compile Include="Assets\topScore.cs" />
     <Compile Include="Assets\tykanie.cs" />
     <Compile Include="Assets\ultimatetogetherness.cs" />
   </ItemGroup>

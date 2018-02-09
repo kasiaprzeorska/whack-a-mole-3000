@@ -9,6 +9,7 @@ public class pause : MonoBehaviour {
     private GameObject rzecz;
     private Image image;
     private Text text;
+    private Button backToMenu;
 
 	// Use this for initialization
 	void Start () {
@@ -16,29 +17,44 @@ public class pause : MonoBehaviour {
         rzecz = GameObject.FindWithTag("ruszacz");
         image = GameObject.Find("pauseOverlay").GetComponent<Image>();
         text = GameObject.Find("pauseOverlay").GetComponentInChildren<Text>();
+        backToMenu = GameObject.Find("wrocDoMenu").GetComponent<Button>();
+        backToMenu.gameObject.SetActive(false);
         image.enabled = false;
         text.enabled = false;
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown("escape"))
         {
-            isPaused = !isPaused;
+            pauseMethod();
+            checkForPause();
         }
+	}
+    
+    void pauseMethod()
+    {
+        isPaused = !isPaused;
+    }
 
+    void checkForPause()
+    {
         if (isPaused)
         {
             Time.timeScale = 0;
             rzecz.GetComponent<MoveWithMouse>().enabled = false;
             image.enabled = true;
             text.enabled = true;
-        } else
+            backToMenu.gameObject.SetActive(true);
+        }
+        else
         {
             Time.timeScale = 1;
             rzecz.GetComponent<MoveWithMouse>().enabled = true;
             image.enabled = false;
             text.enabled = false;
+            backToMenu.gameObject.SetActive(false);
         }
-	}
+    }
 }

@@ -6,15 +6,17 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour {
 
     Image fillImg;
-    float timeAmount = 90;
-    float time;
+    float timeAmount = 30;
+    public float time;
     public int amaunt;
 
 	// Use this for initialization
 	void Start () {
+        PlayerPrefs.SetInt("wynikGry", 0);
         fillImg = GetComponent<Image>();
         fillImg.color = Color.green;
         time = timeAmount;
+        Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -33,8 +35,9 @@ public class timer : MonoBehaviour {
         }
         if (time <= 0)
         {
-            PlayerPrefs.SetInt("wynik", punktacja.punkty);
-            amaunt = PlayerPrefs.GetInt("wynik");
+            PlayerPrefs.SetInt("wynikGry", punktacja.punkty);
+            amaunt = PlayerPrefs.GetInt("wynikGry");
+            endGame.Instance.setKoniecGry(true);
         }
 	}
 }

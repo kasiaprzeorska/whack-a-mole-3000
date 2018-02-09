@@ -19,10 +19,6 @@ public class menuNavigation : MonoBehaviour {
 		SceneManager.LoadScene ("gra");
 	}
 
-	public void DoOpcji(){
-		SceneManager.LoadScene ("opcje");
-	}
-
 	public void DoHallOfFame(){
 		SceneManager.LoadScene ("hopsasa");
 	}

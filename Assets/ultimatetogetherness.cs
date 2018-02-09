@@ -30,6 +30,7 @@ public class ultimatetogetherness : MonoBehaviour {
 		else
 			GetComponent<Renderer>().material.mainTexture = texturesmole [0];
 		Invoke ("Skok", Random.Range (3, 16));
+        mnoznik = 1;
 	}
 
 	// Update is called once per frame
